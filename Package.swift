@@ -26,6 +26,7 @@ let package = Package(
   products: [
     .library(
       name: "FlatBuffers",
+      type: .static, 
       targets: ["FlatBuffers"]),
   ],
   targets: [
