@@ -2,6 +2,10 @@
 // swiftlint:disable all
 // swiftformat:disable all
 
+#if canImport(Common)
+import Common
+#endif
+
 import FlatBuffers
 
 public enum MyGame_Sample_Color: Int8, Enum, Verifiable {
@@ -71,7 +75,7 @@ public struct MyGame_Sample_EquipmentUnion {
 }
 public struct MyGame_Sample_Vec3: NativeStruct, Verifiable, FlatbuffersInitializable, NativeObject {
 
-  static func validateVersion() { FlatBuffersVersion_25_2_10() }
+  static func validateVersion() { FlatBuffersVersion_25_9_23() }
 
   private var _x: Float32
   private var _y: Float32
@@ -134,7 +138,7 @@ extension MyGame_Sample_Vec3: Encodable {
 
 public struct MyGame_Sample_Vec3_Mutable: FlatBufferObject {
 
-  static func validateVersion() { FlatBuffersVersion_25_2_10() }
+  static func validateVersion() { FlatBuffersVersion_25_9_23() }
   public var __buffer: ByteBuffer! { return _accessor.bb }
   private var _accessor: Struct
 
@@ -163,7 +167,7 @@ public struct MyGame_Sample_Vec3_Mutable: FlatBufferObject {
 
 public struct MyGame_Sample_Monster: FlatBufferObject, Verifiable, ObjectAPIPacker {
 
-  static func validateVersion() { FlatBuffersVersion_25_2_10() }
+  static func validateVersion() { FlatBuffersVersion_25_9_23() }
   public var __buffer: ByteBuffer! { return _accessor.bb }
   private var _accessor: Table
 
@@ -432,7 +436,7 @@ public class MyGame_Sample_MonsterT: NativeObject {
 }
 public struct MyGame_Sample_Weapon: FlatBufferObject, Verifiable, ObjectAPIPacker {
 
-  static func validateVersion() { FlatBuffersVersion_25_2_10() }
+  static func validateVersion() { FlatBuffersVersion_25_9_23() }
   public var __buffer: ByteBuffer! { return _accessor.bb }
   private var _accessor: Table
 
