@@ -8,9 +8,9 @@ import Common
 
 import FlatBuffers
 
-public struct models_HelloReply: FlatBufferObject, Verifiable {
+public struct models_HelloReply: FlatBufferTable, FlatbuffersVectorInitializable, Verifiable {
 
-  static func validateVersion() { FlatBuffersVersion_25_9_23() }
+  static func validateVersion() { FlatBuffersVersion_25_12_19() }
   public var __buffer: ByteBuffer! { return _accessor.bb }
   private var _accessor: Table
 
@@ -55,9 +55,9 @@ extension models_HelloReply: Encodable {
   }
 }
 
-public struct models_HelloRequest: FlatBufferObject, Verifiable {
+public struct models_HelloRequest: FlatBufferTable, FlatbuffersVectorInitializable, Verifiable {
 
-  static func validateVersion() { FlatBuffersVersion_25_9_23() }
+  static func validateVersion() { FlatBuffersVersion_25_12_19() }
   public var __buffer: ByteBuffer! { return _accessor.bb }
   private var _accessor: Table
 
